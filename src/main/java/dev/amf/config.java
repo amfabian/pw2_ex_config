@@ -9,11 +9,11 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @Path("/hello")
 public class config {
-    @ConfigProperty(name = "pw2",  defaultValue="" )
-    String pw2;
+    @ConfigProperty(name = "pw2.message",  defaultValue="" )
+    String message;
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return pw2 + "from RESTEasy Reactive";
+        return message + " from RESTEasy Reactive";
     }
 }
